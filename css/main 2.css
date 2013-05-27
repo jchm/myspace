@@ -1,0 +1,78 @@
+@import url(resetclearfix.css);
+@import url(text.css);
+@import url(960.css);
+
+body {
+	background: url(/static/background-alt.png) repeat-x #eee;
+}
+
+#header {
+	background: url(/static/header.png) no-repeat;
+	height: 142px;
+	margin-bottom: 20px;
+}
+
+#header h1#text_logo {
+	background: url(/static/text.png) no-repeat;
+	color: #FFF;
+	width: 458px;
+	height: 50px;
+	text-indent: -999999999px;
+	margin-top: 40px;
+	border: 0;
+}
+
+.red {
+	color: #a23a3a;
+}
+
+h1 {
+	border-bottom: solid 1px #dbdbdb;
+	text-shadow: 0px 1px 0px #FFF;	
+}
+
+p {
+	text-align: justify;
+}
+
+#settings label {
+	display: block;
+}
+
+#settings input {
+	-moz-border-radius: 5px;
+	-webkit-border-radius: 2px;
+	background: #FFF;
+	border: 0;
+	padding: 8px 10px 8px;
+	border-bottom: solid 1px #cfcfcf;
+	border-top: solid 1px #ddd;
+	width: 200px;
+}
+
+#settings input#ms_id {
+	background: url(/static/input_bg.png) 0 0;
+	font-size: 20px;
+	font-weight: bold;
+	letter-spacing: 11px;
+	color: #FFF;
+	overflow: hidden;
+}
+
+#settings ul.format {
+	background: url(/static/input_bg.png);
+	-moz-border-radius: 5px;
+}
+	#settings .format li {
+		margin: 0;
+		list-style: none;
+		color: #FFF;
+	}
+
+#settings .format label {
+	display: inline;
+}
+
+#setttings .format input {
+	width: 50px;
+}

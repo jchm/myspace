@@ -1,0 +1,61 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link rel="icon" href="/fav.png"/>
+
+<meta name="keywords" content="Myspace, Example, JSON, Feed, Event, Show, Shows, Events, List, Band, Bands" />
+<meta name="description" content="An example how to use the Myspace events API using JSON" />
+
+<link rel="stylesheet" type="text/css" href="/css/main.css" />
+
+<title>How to use the Myspace events API with JSON</title>
+
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
+
+<script type="text/javascript">
+function date(ts)
+{
+	/* do anything with the date you want, the date is formatted in a timestamp. */
+	var date = new Date(ts);	
+	return date.toDateString();
+}
+
+$(document).ready(function(){
+	
+	$.getJSON("http://myspace.jochemschutte.nl/api/?format=json&myspace_id=4459262&limit=5&callback=?", function(data){
+		$.each(data, function(i,item){
+			$("#shows").append("<li><strong> " + date(item.date) + "</strong> " + item.city + ", " + item.venue + "</li>");
+		});
+	});  
+      
+});
+</script>
+
+</head>
+<body>
+
+<div id="content" class="container_12">
+	<div class="grid_2"><a href='http://myspace.jochemschutte.nl' id='back'>&laquo; Back to the api page</a></div>
+	<div class="grid_10">
+		<h1>How to use the API with JSON:</h1>
+		<p>This is a simple way to use the <a href='http://myspace.jochemschutte.nl'>myspace events API</a> using jQuery and some javascript. For a demo check out <a href='http://mseventsapi.tumblr.com/'>this Tumblr blog</a>. It's fairly easy.</p>
+		
+		<h1>Demo:</h1>
+		<ul id='shows'>
+		
+		</ul>
+		
+		<h1>Code:</h1>
+		<p>This can be used in every html page with the use of <a href='http://jquery.com'>jQuery</a>. Include jQuery, copy & paste this in your document or tumblr and replace the myspace id in the url with your bands myspace id. The example updates a &lt;ul&gt; with the id 'shows'.</p>
+		<pre><code>&lt;script&nbsp;type="text/javascript"&gt;<br />function&nbsp;date(ts)<br />{<br />&nbsp;&nbsp;&nbsp;&nbsp;/*&nbsp;do&nbsp;anything&nbsp;with&nbsp;the&nbsp;date&nbsp;you&nbsp;want,&nbsp;the&nbsp;date&nbsp;is&nbsp;formatted&nbsp;in&nbsp;a&nbsp;timestamp.&nbsp;*/<br />&nbsp;&nbsp;&nbsp;&nbsp;var&nbsp;date&nbsp;=&nbsp;new&nbsp;Date(ts);&nbsp;&nbsp;&nbsp;&nbsp;<br />&nbsp;&nbsp;&nbsp;&nbsp;return&nbsp;date.toDateString();<br />}<br /><br />$(document).ready(function(){<br />&nbsp;&nbsp;&nbsp;&nbsp;<br />&nbsp;&nbsp;&nbsp;&nbsp;$.getJSON("http://myspace.jochemschutte.nl/api/?format=json&amp;myspace_id=4459262&amp;limit=5&amp;callback=?",&nbsp;function(data){<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;$.each(data,&nbsp;function(i,item){<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;$("#shows").append("&lt;li&gt;&lt;strong&gt;&nbsp;"&nbsp;+&nbsp;date(item.date)&nbsp;+&nbsp;"&lt;/strong&gt;&nbsp;"&nbsp;+&nbsp;item.city&nbsp;+&nbsp;",&nbsp;"&nbsp;+&nbsp;item.venue&nbsp;+&nbsp;"&lt;/li&gt;");<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;});<br />&nbsp;&nbsp;&nbsp;&nbsp;});&nbsp;&nbsp;<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br />});<br />&lt;/script&gt;</code></pre>
+		
+		<h1>The JSON call</h1>
+		<pre>http://myspace.jochemschutte.nl/api/?format=json&myspace_id=4459262&limit=1&callback=?</pre>
+	</div>
+</div>
+
+</body>
+</html>
+

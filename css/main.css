@@ -1,0 +1,136 @@
+@import url(resetclearfix.css);
+@import url(text.css);
+@import url(960.css);
+
+body {
+	padding-top: 20px;
+	background: #fcfcfc;
+	border-top: solid 1px #FFF;
+}
+
+h1 {
+	text-shadow: 0 1px 0 #FFF;
+	color: #102334;
+	font: 22px/1.5 'Helvetica Neue', Helvetica, Arial, 'Liberation Sans', FreeSans, sans-serif;
+}
+
+ a {
+	background: #c9d5e0;
+	padding: 2px;
+	color: #333;
+	text-decoration: none;
+}
+
+ a:hover {
+	background: #102334;
+	color: #FFF;
+}
+
+.red {
+	color: #e44848;
+}
+
+.amp {
+	font: 15px/1.5 'Helvetica Neue', Helvetica, Arial, serif;
+}
+
+#add input, #add label {
+	display: block;
+	float: left;
+	height: 14px;
+	padding: 8px 10px;
+	border: none;
+}
+
+#add input {
+	-moz-border-radius-topleft: 5px;
+	-moz-border-radius-bottomleft: 5px;
+	-webkit-border-bottom-left-radius: 5px;
+	-webkit-border-top-left-radius: 5px;
+	background: #c7d4e1;
+	color: #333;
+	width: 135px;
+}
+
+#add input.submit {
+	background: #f7f7f7;
+	-moz-border-radius: 0;
+	-webkit-border-radius: 0;
+	-webkit-border-top-right-radius: 5px;
+	-moz-border-radius-topright: 5px;
+	-webkit-border-bottom-right-radius: 5px;
+	-moz-border-radius-bottomright: 5px;
+	width: 70px;
+	border: solid 1px #c7d4e1;
+	color: #102334;
+	text-shadow: 0 1px 0 #FFF;
+	height: 30px;
+	padding: 5px;
+}
+
+#add input.submit:active {
+	background: #e4e4e4;
+	text-shadow: 0 -1px 0 #FFF;
+	outline:none;
+}
+
+#add label.error, .error {
+	padding: 5px 5px 11px 5px;
+	background: #e0c9c9;
+	color: #3a0303;
+}
+
+p#add {
+	margin-bottom: 5px;
+}
+
+.info {
+	padding: 2px 0 0 2px;
+	color: #ababab;
+	display: block;
+}
+
+div.error, div.success {
+	-moz-border-radius: 5px;
+	-webkit-border-radius: 5px;
+}
+
+div.error {
+	margin-bottom: 10px;
+	padding: 5px;
+}
+
+.success {
+	border-bottom: solid 1px #FFF;
+	border-top: solid 1px #FFF;
+	background: #c8e0cd;
+	padding: 8px 10px;
+	color: #333;
+	margin-bottom: 20px;
+}
+
+.arguments dt {
+	font-weight: bold;
+	color: #102334;
+}
+
+	.arguments dt .required {
+		background: #fef48d;
+		color: #333;
+		padding: 0 2px;
+	}
+	
+	.arguments dt .optional {
+		font-weight: normal;
+	}
+
+
+.arguments dd {
+	margin: 5px 0 10px 20px;
+}
+
+pre {
+	margin: 0 0 20px 0;
+	padding: 10px 20px;
+	background: #f0f0f0;
+}
